@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Link } from "react-router-dom";
 import Navbar from "./Layout/navbar/Navbar";
 import PublicRoutes from "./routes/PublicRoutes";
+import Footer from "./Layout/footer/Footer";
 
 function App() {
   return (
@@ -10,6 +10,8 @@ function App() {
       <Navbar />
 
       <PublicRoutes />
+
+      <Footer />
     </div>
   );
 }
