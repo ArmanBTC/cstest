@@ -1,7 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector, useDispatch } from "react-redux";
+import { IndexPageReducer } from "./appSlises/IndexPageSlise";
 
-const rootReducers = combineReducers({});
+const rootReducers = combineReducers({
+  indexPageReducer: IndexPageReducer,
+});
 
 export const GetStore = () => {
   return configureStore({
