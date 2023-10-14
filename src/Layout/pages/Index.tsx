@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useAppDispatch, useAppSelector } from "../../appRedux/store";
 import { GetIndexData } from "../../appRedux/appSlises/IndexActionCreateor";
 
@@ -6,9 +6,9 @@ const Index = () => {
   const dispatch = useAppDispatch();
   const test = useAppSelector((state) => state.indexPageReducer.test);
 
-  useEffect(() => {
+  function GetTest() {
     dispatch(GetIndexData());
-  }, []);
+  }
 
   return (
     <div className="indexPage">
@@ -35,6 +35,7 @@ const Index = () => {
           <div className="col card"></div>
           <div className="col card"></div>
           <div className="col card"></div>
+          <button onClick={GetTest}>GET TEST</button>
         </div>
       </div>
     </div>
