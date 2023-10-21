@@ -1,9 +1,11 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector, useDispatch } from "react-redux";
 import { IndexPageReducer } from "./appSlises/IndexPageSlise";
+import { CarReducer } from "./appSlises/carSlice/CarSlice";
 
 const rootReducers = combineReducers({
   indexPageReducer: IndexPageReducer,
+  CarReducerRoot: CarReducer,
 });
 
 export const GetStore = () => {
