@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../appRedux/store";
-import { GetIndexData } from "../../appRedux/appSlises/IndexActionCreateor";
 import { GetCarsAction } from "../../appRedux/appSlises/carSlice/ActionCreateorCar";
 import Translate from "../../i18n/Translate";
 
 const Index = () => {
-  const dispatch = useAppDispatch();
-  //const test = useAppSelector((state) => state.indexPageReducer.test);
+  const dispatch = useAppDispatch(); 
   const cars = useAppSelector((stete) => stete.CarReducerRoot.cars);
 
-  useEffect(() => {
-    // dispatch(GetIndexData());
+  useEffect(() => { 
     dispatch(GetCarsAction());
   }, [dispatch]);
 
