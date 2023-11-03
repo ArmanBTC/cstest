@@ -29,8 +29,8 @@ i18next.use(initReactI18next).init({
   lng: "en", // default language
 });
 
-export default i18next;
-
 export const TransletionResourcesConfig = {
   ns: ["header", "indexPage"],
 };
+
+export default i18next;
