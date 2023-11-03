@@ -2,16 +2,15 @@ import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../appRedux/store";
 import { GetIndexData } from "../../appRedux/appSlises/IndexActionCreateor";
 import { GetCarsAction } from "../../appRedux/appSlises/carSlice/ActionCreateorCar";
+import Translate from "../../i18n/Translate";
 
 const Index = () => {
   const dispatch = useAppDispatch();
-  const test = useAppSelector((state) => state.indexPageReducer.test);
+  //const test = useAppSelector((state) => state.indexPageReducer.test);
   const cars = useAppSelector((stete) => stete.CarReducerRoot.cars);
 
-  if (cars !== null) console.log(cars[0].imagePath);
-  console.log(cars);
   useEffect(() => {
-    dispatch(GetIndexData());
+    // dispatch(GetIndexData());
     dispatch(GetCarsAction());
   }, [dispatch]);
 
@@ -21,12 +20,9 @@ const Index = () => {
 
       <div className="container text-center appMargin">
         <div className="row align-items-center">
-          <div className="col">OUR OFFERTS</div>
-          {test !== null ? (
-            <h1 style={{ color: "#fff" }}>{test}</h1>
-          ) : (
-            <h1>NULL</h1>
-          )}
+          <div className="col">
+            <Translate contentKey="index.ouroffers">OUR OFFERS</Translate>
+          </div>
         </div>
       </div>
 
