@@ -17,13 +17,19 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link className="navbar-brand navLinkTextColor gradient-text" to="#">
+        <Link className="navbar-brand navLinkTextColor gradient-text" to="/">
           OTOBIL
         </Link>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
+            <li
+              className="nav-item"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Theme />
+            </li>
             <li className="nav-item">
-              <Link className="nav-link navLinkTextColor" to={"#"}>
+              <Link className="nav-link navLinkTextColor" to={"/"}>
                 <Translate contentKey="navbar.nav.home">Home</Translate>
               </Link>
             </li>
@@ -33,7 +39,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLinkTextColor" to={"#"}>
+              <Link className="nav-link navLinkTextColor" to={"/signup"}>
                 <Translate contentKey="navbar.nav.signin">Sign In</Translate>
               </Link>
             </li>
@@ -48,14 +54,7 @@ const Navbar = () => {
               <select onChange={onChangeLanguage}>
                 <option value={"en"}>English</option>
                 <option value={"pl"}>Polski</option>
-                <option value={"ru"}>Russian</option>
               </select>
-            </li>
-            <li
-              className="nav-item"
-              style={{ display: "flex", alignItems: "center" }}
-            >
-              <Theme />
             </li>
           </ul>
         </div>

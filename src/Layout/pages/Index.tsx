@@ -27,20 +27,17 @@ const Index = () => {
         <div className="row align-items-center appRow">
           {cars !== null && cars.length > 0 ? (
             cars.map((car, key) => (
-              <div className="col card" key={key}>
-                <div className="card" style={{ width: "18rem" }}>
+              <div className="col " key={key}>
+                <div className="card">
                   <img
                     src={`https://amdprog.azurewebsites.net/api/img?imageName=${car.imagePath}`}
                     className="card-img-top"
                     alt="..."
                   />
+
                   <div className="card-body">
-                    <p className="card-text" style={{ color: "#fff" }}>
-                      {car.name}
-                    </p>
-                    <p className="card-text" style={{ color: "#fff" }}>
-                      {car.price}.zl
-                    </p>
+                    <p className="card-text">{car.name}</p>
+                    <p className="card-text">{car.price}.zl</p>
                   </div>
                 </div>
               </div>
