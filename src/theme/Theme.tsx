@@ -1,7 +1,4 @@
-import { url } from "inspector";
 import { useThemeHook } from "./ThemeHook";
-import DarkIcon from "./iconDark.png";
-import LightIcon from "./iconLight.png";
 import React from "react";
 
 const Theme = () => {
