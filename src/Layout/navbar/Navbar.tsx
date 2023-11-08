@@ -39,7 +39,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link navLinkTextColor" to={"/signup"}>
+              <Link className="nav-link navLinkTextColor" to={"/signin"}>
                 <Translate contentKey="navbar.nav.signin">Sign In</Translate>
               </Link>
             </li>

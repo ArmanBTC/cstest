@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../appRedux/store";
 import { GetCarsAction } from "../../appRedux/appSlises/carSlice/ActionCreateorCar";
 import Translate from "../../i18n/Translate";
+import imgSearch from "../../icons/testimgsearch.png";
 
 const Index = () => {
   const dispatch = useAppDispatch();
@@ -13,7 +14,20 @@ const Index = () => {
 
   return (
     <div className="indexPage">
-      <div className="appColum-1"></div>
+      <div className="appColum-1">
+        <div
+          className="searchBox"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img src={imgSearch} alt="" />
+        </div>
+      </div>
 
       <div className="container text-center appMargin">
         <div className="row align-items-center">
