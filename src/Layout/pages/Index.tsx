@@ -4,10 +4,10 @@ import { GetCarsAction } from "../../appRedux/appSlises/carSlice/ActionCreateorC
 import Translate from "../../i18n/Translate";
 
 const Index = () => {
-  const dispatch = useAppDispatch(); 
+  const dispatch = useAppDispatch();
   const cars = useAppSelector((stete) => stete.CarReducerRoot.cars);
 
-  useEffect(() => { 
+  useEffect(() => {
     dispatch(GetCarsAction());
   }, [dispatch]);
 
