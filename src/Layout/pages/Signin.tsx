@@ -1,28 +1,27 @@
 import React, { useState } from "react";
-import { Api } from "../../api/Api";
+//import { Api } from "../../api/Api";
 import { Link } from "react-router-dom";
 import bmwBackground from "../../icons/bmwicon.jpg";
-
-export interface ISignIn {
-  email: string;
-  password: string;
-  rememberMe: boolean;
-}
+import { useAppDispatch } from "../../appRedux/store";
+import {
+  ISignInParametrs,
+  SignInUserAsync,
+} from "../../appRedux/appSlises/userSlice/ActionCreateorUser";
 
 const Signin = () => {
+  const dispatch = useAppDispatch();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
   async function SigninAsync(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const body: ISignIn = {
+    const body: ISignInParametrs = {
       email: email,
       password: password,
       rememberMe: true,
     };
     console.log(body);
-    const response = await Api.SigninAsync(body);
-    console.log(response);
+    dispatch(SignInUserAsync(body));
   }
 
   return (
