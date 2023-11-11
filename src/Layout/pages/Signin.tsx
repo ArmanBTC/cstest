@@ -7,21 +7,22 @@ import {
   ISignInParametrs,
   SignInUserAsync,
 } from "../../appRedux/appSlises/userSlice/ActionCreateorUser";
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const dispatch = useAppDispatch();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-
+  const navigate = useNavigate();
   async function SigninAsync(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const body: ISignInParametrs = {
-      email: email,
+      username: email,
       password: password,
       rememberMe: true,
     };
-    console.log(body);
     dispatch(SignInUserAsync(body));
+    navigate("/");
   }
 
   return (
@@ -67,7 +68,7 @@ const Signin = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 className="apple-icon"
                 viewBox="0 0 1024 1024"
                 height="1em"
@@ -102,7 +103,7 @@ const Signin = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 version="1.1"
                 x="0px"
                 y="0px"

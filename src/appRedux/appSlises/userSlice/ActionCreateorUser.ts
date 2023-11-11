@@ -2,13 +2,19 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, { AxiosError } from "axios";
 import { IUser } from "./UserSlice";
 
-
-
 export const GetUserAsync = createAsyncThunk(
   "getUser",
   async (_, funcProps) => {
+    const authToken = localStorage.getItem("token");
     try {
-      const responseUser = await axios.get<IUser>("");
+      const responseUser = await axios.get<IUser>(
+        "https://hayt.am:8443/api/account",
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
       return funcProps.fulfillWithValue(responseUser.data);
     } catch (ex) {
       const error = ex as AxiosError;
@@ -20,22 +26,22 @@ export const GetUserAsync = createAsyncThunk(
 );
 
 export interface ISignInParametrs {
-  email: string;
+  username: string; //Email
   password: string;
   rememberMe: true;
 }
 export const SignInUserAsync = createAsyncThunk(
   "getUser",
   async (signupUserData: ISignInParametrs, funcProps) => {
-    const signupResponse = await axios.post("", signupUserData);
-
+    const signupResponse = await axios.post(
+      "https://hayt.am:8443/api/auth",
+      signupUserData
+    );
     if (signupResponse.status === 200) {
-      console.log(signupResponse.data);
-      //const result = await funcProps.dispatch(GetUserAsync());
+      localStorage.setItem("token", signupResponse.data.id_token);
+      funcProps.dispatch(GetUserAsync());
+    } else {
+      alert("Login or Password is not corect");
     }
-   
-    console.log("Mtav Sign IN");
   }
 );
-
-//const Dilay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

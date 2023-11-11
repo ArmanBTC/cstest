@@ -7,7 +7,6 @@ import imgSearch from "../../icons/testimgsearch.png";
 const Index = () => {
   const dispatch = useAppDispatch();
   const cars = useAppSelector((stete) => stete.CarReducerRoot.cars);
-
   useEffect(() => {
     dispatch(GetCarsAction());
   }, [dispatch]);
