@@ -11,7 +11,7 @@ const PublicRoutes = () => {
       <Route path="/" element={<Index />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/signin" element={<Signin />} />
-      <Route path="/accountactiv/activate/:key" element={<ActivationAccount />} />
+      <Route path="/account/activate/:key" element={<ActivationAccount />} />
     </Routes>
   );
 };
