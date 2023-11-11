@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!isAuthorized && token !== null) dispatch(GetUserAsync());
-  }, [dispatch]);
+  }, [dispatch , isAuthorized]);
 
   return (
     <div className="container App">
