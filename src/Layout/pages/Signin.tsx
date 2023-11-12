@@ -21,8 +21,9 @@ const Signin = () => {
       password: password,
       rememberMe: true,
     };
-    dispatch(SignInUserAsync(body));
-    navigate("/");
+    dispatch(SignInUserAsync(body))
+      .unwrap()
+      .then(() => navigate("/"));
   }
 
   return (
