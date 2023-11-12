@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Api } from "../../api/Api";
 import { AxiosResponse } from "axios";
 
@@ -19,9 +19,12 @@ const ActivationAccount = () => {
 
   console.log(key);
   return (
-    <div>
-      <h1>Key: {key}</h1>
-      {isLoad ? <h2>Loading...</h2> : <h2>Status Cod {statusCod}!!!</h2>}
+    <div className="activetContainer">
+      <div className="activetSection">
+        <h3>Key: {key}</h3>
+        {isLoad ? <h2>Loading...</h2> : <h2>Status Cod {statusCod}!!!</h2>}
+        <Link to={"/signin"}>Go to sign in</Link>
+      </div>
     </div>
   );
 };

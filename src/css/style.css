@@ -349,3 +349,23 @@ body #root {
   font-size: 18px;
   margin-bottom: 1px;
 }
+
+.activetContainer {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.activetContainer .activetSection {
+  width: 300px;
+  min-height: 200px;
+  background-color: rgb(10, 231, 10);
+  box-shadow: 0 0 15px 0 #02ee65;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.activetContainer .activetSection h3 {
+  font-weight: 900;
+}
