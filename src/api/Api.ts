@@ -16,4 +16,3 @@ export class Api {
     return response;
   }
 }
-//http://127.0.0.1:8080/account/activate?key=MxdIf1er3EObR3uPa5m6DEPQmz8mzpE5
