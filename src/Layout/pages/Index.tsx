@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../appRedux/store";
 import { GetCarsAction } from "../../appRedux/appSlises/carSlice/ActionCreateorCar";
 import Translate from "../../i18n/Translate";
 import imgSearch from "../../icons/testimgsearch.png";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const Index = () => {
   const dispatch = useAppDispatch();
@@ -31,7 +31,9 @@ const Index = () => {
 
       <div className="container text-center appMargin">
         <div className="row align-items-center">
-          {<Link to={"/account/activate/params?id=155"}>Go to Activ</Link>}
+          {
+            //<Link to={"/user/activate/params?id=155"}>Go to Activ</Link>
+          }
           <div className="col">
             <Translate contentKey="index.ouroffers">OUR OFFERS</Translate>
           </div>
