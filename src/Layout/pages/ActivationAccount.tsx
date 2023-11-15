@@ -20,7 +20,7 @@ const ActivationAccount = () => {
   }
   useEffect(() => {
     GetActivUser();
-  }, []);
+  });
 
   console.log(key);
   return (
