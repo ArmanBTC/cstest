@@ -1,5 +1,5 @@
 import axios, { AxiosError } from "axios";
-import  { useState } from "react";
+import { useState } from "react";
 
 export const useRequestWithLoader_AMD = <DataType>() => {
   const [isLoading, setLoading] = useState(false);

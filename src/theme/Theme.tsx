@@ -1,5 +1,5 @@
-import { useThemeHook } from "./ThemeHook";
 import React from "react";
+import { useThemeHook } from "./ThemeHook";
 
 const Theme = () => {
   const { theme, setTheme } = useThemeHook();
