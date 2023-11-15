@@ -230,9 +230,15 @@ body #root {
 .signup {
   width: 100%;
   height: 800px;
-  background-image: linear-gradient(0deg, var(--gradigenSerchBachground-color1) 0%, var(--gradigenSerchBachground-color2) 100%, var(--gradigenSerchBachground-color3) 100%);
+  /* background-image: linear-gradient(
+    0deg,
+    var(--gradigenSerchBachground-color1) 0%,
+    var(--gradigenSerchBachground-color2) 100%,
+    var(--gradigenSerchBachground-color3) 100%
+  );
+  */
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -371,4 +377,28 @@ body #root {
   font-weight: 900;
   word-wrap: break-word;
   width: 100%;
+}
+
+.madal {
+  width: 700px;
+  height: 150px;
+  background-color: rgb(252, 252, 252);
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #159703;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px 0 rgb(70, 70, 70);
+  border-radius: 20px;
+}
+
+.closeAmd {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  color: black;
 }

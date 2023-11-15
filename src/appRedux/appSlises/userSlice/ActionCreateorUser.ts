@@ -8,7 +8,7 @@ export const GetUserAsync = createAsyncThunk(
     const authToken = localStorage.getItem("token");
     try {
       const responseUser = await axios.get<IUser>(
-        "https://hayt.am:8443/api/account",
+        "https://hayt.am:8443/api/user",
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
