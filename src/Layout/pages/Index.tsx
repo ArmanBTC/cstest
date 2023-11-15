@@ -10,7 +10,7 @@ const Index = () => {
   const cars = useAppSelector((stete) => stete.CarReducerRoot.cars);
   useEffect(() => {
     dispatch(GetCarsAction());
-  });
+  }, [dispatch]);
 
   return (
     <div className="indexPage">
