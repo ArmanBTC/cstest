@@ -13,9 +13,9 @@ const ActivationAccount = () => {
   const [isLoad, setIsLoad] = useState(false);
   const [statusCod, setstatusCod] = useState<number>(0);
   async function GetActivUser() {
-   // const response: AxiosResponse = await Api.ActivetUserAsync(key);
+    const response: AxiosResponse = await Api.ActivetUserAsync(key);
     setIsLoad(true);
-    //setstatusCod(response.status);
+    setstatusCod(response.status);
     setIsLoad(false);
   }
   useEffect(() => {

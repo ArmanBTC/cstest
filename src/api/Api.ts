@@ -11,7 +11,7 @@ export class Api {
   }
   static async ActivetUserAsync(key: any) {
     const response = await axios.get(
-      `https://hayt.am:8443/api/account/activate?key=${key}`
+      `https://hayt.am:8443/api/user/activate?key=${key}`
     );
     return response;
   }
